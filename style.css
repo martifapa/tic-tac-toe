@@ -1,0 +1,125 @@
+:root {
+    --square-width: 100px;
+    --dark-blue: #13005A;
+    --middle-blue: #00337C;
+    --light-blue: #1C82AD;
+    --light-turquoise: #03C988;
+    --dark-grey: #212A3E;
+    --white: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: var(--middle-blue);
+    height: 100vh;
+}
+
+.game-container {
+    background: var(--middle-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.scoreboards {
+    background: lightpink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.title {
+    background: var(--dark-blue);
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    color: var(--white);
+}
+.scoreboard {
+    background: lightgreen;
+    font-size: 1.6rem;
+}
+.score {
+    background: lightskyblue;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.turns-container {
+    background: lightgray;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(var(--square-width) * 3 + 30px);
+    gap: 15px;
+    justify-content: center;
+}
+.square {
+    background: var(--dark-grey);
+    width: var(--square-width);
+    height: var(--square-width);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px black, 0 6px 0 black;
+    font-size: 5.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    transition: transform 200ms ease-out, border 200ms;
+}
+.square:active {
+    box-shadow: 0 5px 15px black, 0 2px 0 black;
+    transform: translateY(4px);
+    border: 6px var(--light-turquoise) solid;
+}
+
+.marker-x {
+    color: var(--light-turquoise);
+}
+.marker-o {
+    color: var(--light-blue);
+}
+
+#winner-popup {
+    background: lightgoldenrodyellow;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    border: 2px burlywood solid;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+}
+
+.reset-btns {
+    display: flex;
+    gap: 20px;
+}
+.reset-btns > * {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px black, 0 6px 0 black;
+    transition: tranform 200ms ease-out;
+}
+.reset-btns > *:active {
+    transform: translateY(4px);
+    box-shadow: 0 5px 15px black, 0 4px 0 black;
+}
+

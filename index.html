@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Tic-Tac-Toe</h2>
+        </div>
+        <div class="game-container">
+
+            <div class="scoreboards">
+                <div class="scoreboard">
+                    <h2>Player X</h2>
+                    <h2 class="score" id="player-x">0</h2>
+                </div>
+                <div class="turns-container">
+                    <h2>Turn</h2>
+                    <h2 class="turn">X</h2>
+                </div>
+                <div class="scoreboard">
+                    <h2>Player O</h2>
+                    <h2 class="score" id="player-o">0</h2>
+                </div>
+            </div>
+            <div class="game">
+
+            </div>
+
+            <div class="reset-btns">
+                <button id="reset-round-btn">Reset Round</button>
+                <button id="reset-scores-btn">Reset Scores</button>
+            </div>
+        
+        </div>
+
+    </div>
+    <div id="winner-popup">
+        <h2 id="winner-message"></h2>
+    </div>
+</body>
+</html>
